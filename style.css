@@ -1,0 +1,435 @@
+.qr {
+  background-image: url("resources/qr.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  margin-left: -75px;
+}
+
+.stores {
+  background-image: url("resources/store.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  margin-left: -75px;
+}
+
+.headerbg {
+  background-color: white;
+  height: 60px;
+}
+
+.smallbg {
+  background-image: url("resources/smbg.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+}
+
+.logo {
+  background-image: url("resources/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35px;
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+}
+
+.sidebarbgselect {
+  background: none;
+}
+
+.imgslider1 {
+  background-image: url("resources/s1.jpg");
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgslider2 {
+  background-image: url("resources/s2.jpg");
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 600px) {
+  .imgslider {
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.carobtn {
+  margin-left: -750px;
+  margin-top: -400px;
+}
+
+.carotxt {
+  margin-left: -650px;
+  margin-top: -150px;
+}
+
+.sideimgslider {
+  height: 360px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dealimg {
+  height: 260px;
+}
+
+.topitem {
+  height: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.toprow {
+  max-height: 180px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.singletopitem {
+  min-width: 30px;
+}
+
+.ads {
+  height: 200px;
+  width: 100%;
+  background-color: rgb(161, 161, 161);
+}
+
+.ik {
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.productcard:hover {
+  padding: 3px;
+}
+
+.logofooter {
+  background-image: url("resources/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  margin-left: -310px;
+}
+
+.navbg {
+  background-color: rgb(123, 129, 141);
+}
+
+.profile-body-color {
+  background-color: rgb(240, 240, 240);
+}
+
+.store-bg-color {
+  background-color: rgb(88, 87, 87);
+}
+
+.store-bg-content-color {
+  background-color: rgb(228, 228, 228);
+}
+
+.txtdec {
+  text-decoration: none;
+}
+
+.sort-bg-color {
+  background-color: rgb(240, 240, 240);
+}
+
+.singlimg {
+  margin-left: -15px;
+}
+
+.maingsinglimg {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.i1 {
+  background-image: url("resources/visa_img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+}
+
+.i2 {
+  background-image: url("resources/mastercard_img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+}
+
+.i3 {
+  background-image: url("resources/paypal_img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+}
+
+.watchlist-icon {
+  cursor: pointer;
+}
+
+.watchlist-icon:hover {
+  color: red;
+}
+
+.admin-body {
+  background-image: url("resources/adminbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.hello-admin {
+  font-size: 90px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.hello-admin:hover {
+  color: rgb(204, 204, 204);
+  font-weight: bold;
+}
+
+.admin-email-input {
+  background: none;
+  border: none;
+  border-bottom: solid;
+  border-color: rgb(255, 255, 255);
+  color: white;
+}
+
+.admin-email-input:focus {
+  outline: none;
+}
+
+.invoice-logo {
+  background-image: url("resources/logoon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+}
+
+.sellerimg {
+  width: 200px;
+  height: 200px;
+}
+
+.homecategorcard {
+  animation-name: card;
+  animation-duration: 1s;
+}
+
+@keyframes card {
+  from {
+    margin-top: 100px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+.nav-links {
+  color: #000000;
+}
+
+.nav-links:hover {
+  color: #00cd27;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 130px;
+}
+
+.search-input:focus {
+  border: none;
+  outline: none;
+}
+
+.slider_content {
+  margin-top: 180px;
+}
+
+.discover-btn {
+  background-color: black;
+  color: white;
+  height: 60px;
+  width: 200px;
+  border-radius: 50px;
+}
+
+.line {
+  border: solid;
+  border-color: black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-width: 3px;
+}
+
+.line2 {
+  border: solid;
+  border-color: rgb(255, 255, 255);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-width: 3px;
+}
+
+.footer_social {
+  margin-top: 23px;
+  text-align: center;
+}
+
+.footer_social ul li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.footer_social ul li:last-child {
+  margin-right: 0;
+}
+
+.footer_social ul li a {
+  width: 42px;
+  height: 42px;
+  line-height: 44px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+  border-radius: 50%;
+}
+
+.footer_social ul li a:hover {
+  color: #ffffff;
+  background: #00cd27;
+}
+
+.footer_app {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.pro-img-bg {
+  height: 70px;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.397);
+  position: absolute;
+  margin-top: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  display: none;
+}
+
+.pro-img-bg-main:hover .pro-img-bg {
+  display: block;
+}
+
+.tile-bg {
+  background-image: url("resources/tile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+}
+
+.about-img {
+  background-image: url("resources/aboutus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.contact-img {
+  background-image: url("resources/contactus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.opacity-bg {
+  background-color: rgba(255, 255, 255, 0.342);
+}
+
+.send-msg {
+  background-color: rgba(0, 0, 255, 0.267);
+  height: auto;
+  padding: 5px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  font-weight: bold;
+  color: black;
+}
+
+.rec-msg{
+  background-color: rgba(177, 177, 177, 0.267);
+  height: auto;
+  padding: 5px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollable-content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollable-content {
+  overflow: auto; /* Enable scrolling */
+  max-height: 60vh; /* Set a height for the scrollable area */
+}
+
+.chat-icon{
+  background-image: url("resources/chat-icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
