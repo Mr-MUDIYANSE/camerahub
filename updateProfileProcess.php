@@ -14,7 +14,6 @@ if (isset($_SESSION["u"])) {
     $province = $_POST["p"];
     $district = $_POST["d"];
     $city = $_POST["c"];
-    $country = $_POST["cntry"];
     $pcode = $_POST["pc"];
 
     if (isset($_FILES["image"])) {
@@ -60,7 +59,7 @@ if (isset($_SESSION["u"])) {
         }
     }
 
-    Database::iud("UPDATE `user` SET `fname`='" . $fname . "',`lname`='" . $lname . "',`mobile`='" . $mobile . "',`country_id`='".$country."' 
+    Database::iud("UPDATE `user` SET `fname`='" . $fname . "',`lname`='" . $lname . "',`mobile`='" . $mobile . "'
             WHERE `email`='" . $_SESSION["u"]["email"] . "'");
 
     $address_rs = Database::search("SELECT * FROM `user_has_address` WHERE 

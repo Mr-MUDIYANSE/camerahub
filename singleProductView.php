@@ -152,17 +152,39 @@ if (isset($_GET["id"])) {
 
                                         if ($product_data["qty"] > 0) {
 
+                                            if (isset($_SESSION["u"])) {
+                                                if ($_SESSION["u"]["email"] == $product_data["user_email"]) {
                                         ?>
-                                            <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
-                                                <button class="btn btn-primary fw-bold w-75 mt-2 mb-2" onclick="payNow(<?php echo $pid ?>);">Buy Now</button>
-                                            </div>
-                                            <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
-                                                <button class="btn btn-warning fw-bold text-white w-75 mt-2 mb-2" onclick="addToCart(<?php echo $product_data['id']; ?>);">Add To Cart</button>
-                                            </div>
-                                        <?php
+                                                    <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
+                                                        <button class="btn btn-primary fw-bold w-75 mt-2 mb-2" disabled onclick="payNow(<?php echo $pid ?>);">Buy Now</button>
+                                                    </div>
+                                                    <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
+                                                        <button class="btn btn-warning fw-bold text-white w-75 mt-2 mb-2" disabled onclick="addToCart(<?php echo $product_data['id']; ?>);">Add To Cart</button>
+                                                    </div>
 
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
+                                                        <button class="btn btn-primary fw-bold w-75 mt-2 mb-2" onclick="payNow(<?php echo $pid ?>);">Buy Now</button>
+                                                    </div>
+                                                    <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
+                                                        <button class="btn btn-warning fw-bold text-white w-75 mt-2 mb-2" onclick="addToCart(<?php echo $product_data['id']; ?>);">Add To Cart</button>
+                                                    </div>
+                                                <?php
+                                                }
+                                            } else {
+                                                ?>
+                                                <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
+                                                    <button class="btn btn-primary fw-bold w-75 mt-2 mb-2" onclick="payNow(<?php echo $pid ?>);">Buy Now</button>
+                                                </div>
+                                                <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
+                                                    <button class="btn btn-warning fw-bold text-white w-75 mt-2 mb-2" onclick="addToCart(<?php echo $product_data['id']; ?>);">Add To Cart</button>
+                                                </div>
+                                            <?php
+                                            }
                                         } else {
-                                        ?>
+                                            ?>
                                             <div class="col-12 col-lg-6 text-lg-center ms-lg-0 ms-3">
                                                 <button class="btn btn-secondary fw-bold w-75 mt-2 mb-2" disabled>Buy Now</button>
                                             </div>

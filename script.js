@@ -227,8 +227,9 @@ function saveChanges() {
     var district = document.getElementById("district");
     var city = document.getElementById("city");
     var pcode = document.getElementById("pcode");
-    var country = document.getElementById("cntry");
     var image = document.getElementById("profileimg");
+
+    console.log(image.files[0]);
 
 
     var f = new FormData();
@@ -240,12 +241,11 @@ function saveChanges() {
     f.append("p", province.value);
     f.append("d", district.value);
     f.append("c", city.value);
-    f.append("cntry", country.value);
     f.append("pc", pcode.value);
 
     if (image.files.length == 0) {
 
-        var confirmation = confirm("Are you sure You donnt want to update profile Picture ?");
+        var confirmation = confirm("Are you sure You don't want to update profile Picture ?");
 
         if (confirmation) {
             alert("You have not selected any Image");
@@ -262,6 +262,7 @@ function saveChanges() {
         if (r.readyState == 4) {
             var t = r.responseText;
             if (t == "success") {
+                alert(t);
                 window.location.reload();
             } else {
                 alert(t);
