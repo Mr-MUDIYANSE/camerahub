@@ -32,7 +32,7 @@ if(isset($_POST["e"])){
             $mail->addReplyTo('kanishkarosairo98@gmail.com', 'Admin Verification');
             $mail->addAddress($email);
             $mail->isHTML(true);
-            $mail->Subject = 'Onliner Admin Login Verification Code';
+            $mail->Subject = 'CameraHub Admin Login Verification Code';
             $bodyContent = '<h1 style="color:blue;">Your verification code is '.$code.'</h1>';
             $mail->Body = $bodyContent;
 
