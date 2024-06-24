@@ -262,88 +262,59 @@ if (isset($_GET["id"])) {
 
                                         <span><i class="bi bi-geo-alt"></i>&nbsp;&nbsp;<?php echo $user_data["fname"] . " " . $user_data["lname"]; ?>
 
-                                        <!--Modal-->
+                                            <!--Modal-->
 
-                                        <div class="modal" tabindex="-1" id="verificationModal">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content p-2">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title">Quick Chat</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="col-12 scrollable-content">
-
-                                                            <div class="row d-flex justify-content-start mb-2">
-                                                                <div class="send-msg w-50 ps-4">
-                                                                    <span>Hello !</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row d-flex justify-content-end align-items-end mb-2">
-                                                                <div class="rec-msg w-50">
-                                                                    <span>Hello !</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row d-flex justify-content-end align-items-end pe-2">
-                                                                <div class="rec-msg w-50">
-                                                                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum non consequatur placeat excepturi at quas, reiciendis quis quia rem. Repudiandae obcaecati eos reprehenderit ex voluptas atque rem eum quibusdam dolores. !</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row d-flex justify-content-start mb-2 ps-4">
-                                                                <div class="send-msg w-50">
-                                                                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum non</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row d-flex justify-content-start mb-2 ps-4">
-                                                                <div class="send-msg w-50">
-                                                                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum non</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row d-flex justify-content-start mb-2 ps-4">
-                                                                <div class="send-msg w-50">
-                                                                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum non</span>
-                                                                </div>
-                                                            </div>
-
+                                            <!-- Your existing HTML code for the modal here -->
+                                            <div class="modal" tabindex="" id="verificationModal">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content p-2">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Quick Chat</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <div class="col-12">
-                                                            <div class="row">
-                                                                <div class="col-11">
-                                                                    <input type="text" class="form-control" placeholder="Type here..."/>
-                                                                </div>
-                                                                <div class="col-1 d-flex justify-content-center align-items-center">
-                                                                    <i class="bi bi-send-fill fs-3 text-primary" style="cursor: pointer;"></i>
+                                                        <div class="modal-body">
+                                                            <div class="col-12 scrollable-content" id="chat-content" style="height: 60vh;">
+                                                                <!-- Chat messages will be inserted here -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <div class="col-12">
+                                                                <div class="row">
+                                                                    <div class="col-11">
+                                                                        <input type="text" class="form-control" placeholder="Type here..." id="msg" />
+                                                                    </div>
+                                                                    <div class="col-1 d-flex justify-content-center align-items-center">
+                                                                        <i class="bi bi-send-fill fs-3 text-primary" style="cursor: pointer;" onclick="send_msg(`<?php echo $product_data['user_email']; ?>`)"></i>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!--Modal-->
+                                            <!--Modal-->
 
                                     </div>
 
                                 </div>
-                            <?php
+                                <?php
+                                if ($_SESSION["u"]["email"] != $product_data["user_email"]) {
+                                ?>
+                                    <div style="position: absolute; height: 40px; width: 40px; border-radius: 20px; margin-top: 450px; margin-left: 1270px;" class="chat-icon" onclick="viewMessageModal(); viewMessage(`<?php echo $product_data['user_email']; ?>`);">
+                                    <?php
+                                }
+                                    ?>
+                                <?php
                             }
-                            ?>
+                                ?>
+
+                                    </div>
+
 
                         </div>
 
 
-                    </div>
-
-                    <div style="position: absolute; height: 40px; width: 40px; border-radius: 20px; margin-top: 500px; margin-left: 1270px;" class="chat-icon" onclick="chat();">
-                        
                     </div>
 
                     <?php include "footer.php"; ?>
@@ -354,6 +325,7 @@ if (isset($_GET["id"])) {
 
             <script src="script.js"></script>
             <script src="bootstrap.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
             <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
         </body>
 

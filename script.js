@@ -1063,9 +1063,53 @@ function contact() {
     r.send(f);
 
 }
-
-function chat() {
+var x;
+function viewMessageModal() {
     var adminVerificationModal = document.getElementById("verificationModal");
-                av = new bootstrap.Modal(adminVerificationModal);
-                av.show();
+    x = new bootstrap.Modal(adminVerificationModal);
+    x.show();
+}
+
+function viewMessage(rec_email) {
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            document.getElementById("chat-content").innerHTML = t;
+        }
+    };
+
+    r.open("GET", "viewMsgProcess.php?rec-email=" + rec_email, true);
+    r.send();
+}
+
+
+function send_msg(rec_email) {
+
+    var rec_email = rec_email;
+    var msg = document.getElementById("msg");
+
+    var f = new FormData();
+    f.append("rec_email", rec_email);
+    f.append("msg", msg.value);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+
+            if (t == "success") {
+                document.getElementById("chat-content").innerHTML = viewMessage(rec_email);
+                document.getElementById("msg").value = "";
+            } else {
+                alert(t);
+            }
+        }
+    };
+
+    r.open("POST", "sendMsgProcess.php", true);
+    r.send(f);
 }
