@@ -25,7 +25,9 @@
         <div class="row d-flex mt-3 bg-white">
 
             <div class="col-2 d-none d-lg-block">
-                <a href="index.php"><div class="logo"></div></a>
+                <a href="index.php">
+                    <div class="logo"></div>
+                </a>
             </div>
 
             <div class="col-7 d-flex justify-content-center align-items-center gap-5">
@@ -47,8 +49,28 @@
                         gender.id=user.gender_id WHERE `email`='" . $email . "'");
 
                     $user = $user_rs->fetch_assoc();
+
+                    $mrs = Database::search("SELECT COUNT(`id`) FROM `chat` WHERE `to` = '" . $email . "' AND `status` = '0'");
+
+                    $mr = $mrs->fetch_assoc();
+
+                    $m = $mr["COUNT(`id`)"];
+
                 ?>
+                    <div class="position-relative">
+                        <?php
+                        if ($m > 0) {
+                        ?>
+                            <div style="position: absolute; margin-left: 12px; margin-top: -8px; height: 15px; width: 15px; border-radius: 7.5px; cursor: pointer;" class="bg-primary d-flex justify-content-center align-items-center p-2">
+                                <span style="font-size: 10px; color: white; margin-top: 2px;"><?php echo $m; ?></span>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                        <i class="bi bi-chat fs-4" style="cursor: pointer;"></i>
+                    </div>
                     <i class="bi bi-people fs-4" style="cursor: pointer;" id="sidebar2"></i>
+
 
                 <?php
                 } else {
@@ -59,10 +81,11 @@
                 ?>
                 <a href="watchlist.php"><i class="bi bi-heart fs-4 text-black" style="cursor: pointer;"></i></a>
                 <a href="cart.php" class="text-decoration-none"><i class="bi bi-bag fs-4 text-black" style="cursor: pointer;"></i></a>
+
             </div>
 
         </div>
-<hr>
+        <hr>
     </div>
 
     <!--------------------------------------------------------------------->

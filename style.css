@@ -433,3 +433,7 @@
   background-position: center;
   cursor: pointer;
 }
+
+.msgmodalcolor{
+  background-color: rgba(0, 0, 255, 0.103);
+}

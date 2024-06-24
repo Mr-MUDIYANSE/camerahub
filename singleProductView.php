@@ -259,41 +259,51 @@ if (isset($_GET["id"])) {
 
                                         ?>
 
+                                        <?php
 
-                                        <span><i class="bi bi-geo-alt"></i>&nbsp;&nbsp;<?php echo $user_data["fname"] . " " . $user_data["lname"]; ?>
+                                        if ($_SESSION["u"]["email"] == $product_data["user_email"]) {
+                                        ?>
+                                            <span><i class="bi bi-geo-alt"></i>&nbsp;&nbsp;You</span>
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <span><i class="bi bi-geo-alt"></i>&nbsp;&nbsp;<?php echo $user_data["fname"] . " " . $user_data["lname"]; ?></span>
+                                        <?php
+                                        }
+                                        ?>
 
-                                            <!--Modal-->
 
-                                            <!-- Your existing HTML code for the modal here -->
-                                            <div class="modal" tabindex="" id="verificationModal">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content p-2">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title">Quick Chat</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <!--Modal-->
+
+                                        <div class="modal" tabindex="" id="verificationModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content p-2">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Quick Chat</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="col-12 scrollable-content" id="chat-content" style="height: 60vh;">
+                                                            <!-- Chat messages will be inserted here -->
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <div class="col-12 scrollable-content" id="chat-content" style="height: 60vh;">
-                                                                <!-- Chat messages will be inserted here -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <div class="col-12">
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <input type="text" class="form-control" placeholder="Type here..." id="msg" />
-                                                                    </div>
-                                                                    <div class="col-1 d-flex justify-content-center align-items-center">
-                                                                        <i class="bi bi-send-fill fs-3 text-primary" style="cursor: pointer;" onclick="send_msg(`<?php echo $product_data['user_email']; ?>`)"></i>
-                                                                    </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div class="col-12">
+                                                            <div class="row">
+                                                                <div class="col-11">
+                                                                    <input type="text" class="form-control" placeholder="Type here..." id="msg" />
+                                                                </div>
+                                                                <div class="col-1 d-flex justify-content-center align-items-center">
+                                                                    <i class="bi bi-send-fill fs-3 text-primary" style="cursor: pointer;" onclick="send_msg(`<?php echo $product_data['user_email']; ?>`)"></i>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
 
-                                            <!--Modal-->
+                                        <!--Modal-->
 
                                     </div>
 
