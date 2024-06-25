@@ -256,7 +256,7 @@ if (isset($_GET["id"])) {
                                             <hr>
                                             <span><i class="bi bi-truck"></i>&nbsp;&nbsp; Standard Delivery</span><br>
                                             <span class="ms-4 text-black-50" style="font-size: 13px;">4 - 5 Days</span>
-                                            <span class="offset-6"><b> Rs. 350</b></span>
+                                            <span class="offset-6"><b> Free</b></span>
                                             <br>
                                             <span><i class="bi bi-wallet2"></i>&nbsp;&nbsp; Cash on Delivery Available</span>
                                             <hr>

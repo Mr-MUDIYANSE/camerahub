@@ -400,7 +400,7 @@
   color: black;
 }
 
-.rec-msg{
+.rec-msg {
   background-color: rgba(177, 177, 177, 0.267);
   height: auto;
   padding: 5px;
@@ -417,8 +417,8 @@
 
 /* Hide scrollbar for IE, Edge, and Firefox */
 .scrollable-content {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .scrollable-content {
@@ -426,7 +426,7 @@
   max-height: 60vh; /* Set a height for the scrollable area */
 }
 
-.chat-icon{
+.chat-icon {
   background-image: url("resources/chat-icon.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -434,6 +434,32 @@
   cursor: pointer;
 }
 
-.msgmodalcolor{
+.chat-inbox-new {
   background-color: rgba(0, 0, 255, 0.103);
+  /* border-bottom: 0.5px solid #00000018; */
+}
+
+.chat-inbox-seen {
+  background-color: rgba(0, 0, 0, 0.020);
+  padding-right: 28px;
+  padding-left: 7px;
+  .doticon{
+    display: none;
+  }
+}
+
+.label-inline {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+.label-inline i {
+  margin-right: 5px; /* Adjust as needed for spacing */
+  font-size: 1.5em; /* Adjust as needed for icon size */
+}
+
+.inbox-content{
+  overflow-x: scroll;
+  position: fixed;
 }

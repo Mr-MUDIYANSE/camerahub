@@ -1,0 +1,260 @@
+.qr {
+    background-image: url("resources/qr.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    margin-left: -75px;
+}
+
+.stores {
+    background-image: url("resources/store.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    margin-left: -75px;
+}
+
+.headerbg {
+    background-color: rgb(228, 228, 228);
+}
+
+.smallbg {
+    background-image: url("resources/smbg.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
+.logohome {
+    background-image: url("resources/logoon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35px;
+    cursor: pointer;
+}
+
+.bar {
+    position: absolute;
+}
+
+.sidebarbgselect {
+    background: none;
+}
+
+.imgslider {
+    height: 455px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 600px) {
+    .imgslider {
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.carobtn {
+    margin-left: -750px;
+    margin-top: -400px;
+}
+
+.carotxt {
+    margin-left: -650px;
+    margin-top: -150px;
+}
+
+.sideimgslider {
+    height: 360px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dealimg {
+    height: 260px;
+}
+
+.topitem {
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.toprow {
+    max-height: 180px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.singletopitem {
+    min-width: 30px;
+}
+
+.ads {
+    height: 200px;
+    width: 100%;
+    background-color: rgb(161, 161, 161);
+}
+
+.ik {
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.productcard:hover {
+    padding: 3px;
+}
+
+.logofooter {
+    background-image: url("resources/logoon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 20px;
+    margin-left: -250px;
+}
+
+.navbg {
+    background-color: rgb(123, 129, 141);
+}
+
+.profile-body-color {
+    background-color: rgb(240, 240, 240);
+}
+
+.store-bg-color {
+    background-color: rgb(88, 87, 87);
+}
+
+.store-bg-content-color {
+    background-color: rgb(228, 228, 228);
+}
+
+.txtdec {
+    text-decoration: none;
+}
+
+.sort-bg-color {
+    background-color: rgb(240, 240, 240);
+}
+
+.singlimg {
+    margin-left: -15px;
+}
+
+.maingsinglimg {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.i1 {
+    background-image: url("resources/visa_img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+.i2 {
+    background-image: url("resources/mastercard_img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+.i3 {
+    background-image: url("resources/paypal_img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+.watchlist-icon {
+    cursor: pointer;
+}
+
+.watchlist-icon:hover {
+    color: red;
+}
+
+.admin-body {
+    background-image: url("resources/adminbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.hello-admin {
+    font-size: 90px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.hello-admin:hover {
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+}
+
+.admin-email-input {
+    background: none;
+    border: none;
+    border-bottom: solid;
+    border-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.admin-email-input:focus {
+    outline: none;
+}
+
+.invoice-logo {
+    background-image: url("resources/logoon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+}
+
+.sellerimg {
+    width: 200px;
+    height: 200px;
+}
+
+.homecategorcard {
+    animation-name: card;
+    animation-duration: 1s;
+}
+
+@keyframes card {
+    from {
+        margin-top: 100px;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
+
+.navigationlinks {
+    color: black;
+}
+
+.navigationlinks:hover {
+    color: orange;
+}

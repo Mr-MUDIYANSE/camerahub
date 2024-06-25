@@ -1064,11 +1064,19 @@ function contact() {
     r.send(f);
 
 }
+
 var x;
 function viewMessageModal() {
     var adminVerificationModal = document.getElementById("verificationModal");
     x = new bootstrap.Modal(adminVerificationModal);
     x.show();
+}
+
+var y;
+function chatWallModal() {
+    var m = document.getElementById("inmodal");
+    y = new bootstrap.Modal(m);
+    y.show();
 }
 
 function viewMessage(rec_email) {
@@ -1083,6 +1091,20 @@ function viewMessage(rec_email) {
     };
 
     r.open("GET", "viewMsgProcess.php?rec-email=" + rec_email, true);
+    r.send();
+}
+
+function loadChatWall(email) {
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            document.getElementById("inbox-wall-content").innerHTML = t;
+        }
+    };
+
+    r.open("GET", "viewChatWallProcess.php?e=" + email, true);
     r.send();
 }
 
@@ -1113,4 +1135,35 @@ function send_msg(rec_email) {
 
     r.open("POST", "sendMsgProcess.php", true);
     r.send(f);
+}
+
+function chatInbox(email) {
+    document.getElementById("inbox-wall-content").className = "d-none";
+    document.getElementById("inbox-content").className = "d-block";
+    document.getElementById("exampleModalLabel1").className = "d-none";
+    document.getElementById("exampleModalLabel2").className = "d-block";
+    document.getElementById("modal-footer").className = "d-block";
+
+    var f = new FormData();
+    f.append("email", email);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            document.getElementById("inbox-content").innerHTML = t;
+        }
+    };
+
+    r.open("POST", "loadInboxProcess.php", true);
+    r.send(f);
+}
+
+function backInbox() {
+    document.getElementById("inbox-wall-content").className = "d-block";
+    document.getElementById("inbox-content").className = "d-none";
+    document.getElementById("exampleModalLabel2").className = "d-none";
+    document.getElementById("exampleModalLabel1").className = "d-block";
+    document.getElementById("modal-footer").className = "d-none";
 }

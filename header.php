@@ -61,13 +61,13 @@
                         <?php
                         if ($m > 0) {
                         ?>
-                            <div style="position: absolute; margin-left: 12px; margin-top: -8px; height: 15px; width: 15px; border-radius: 7.5px; cursor: pointer;" class="bg-primary d-flex justify-content-center align-items-center p-2">
+                            <div style="position: absolute; margin-left: 12px; margin-top: -8px; height: 15px; width: 15px; border-radius: 7.5px; cursor: pointer;" class="bg-primary d-flex justify-content-center align-items-center p-2" onclick="chatWallModal(); loadChatWall(`<?php echo $email; ?>`);">
                                 <span style="font-size: 10px; color: white; margin-top: 2px;"><?php echo $m; ?></span>
                             </div>
                         <?php
                         }
                         ?>
-                        <i class="bi bi-chat fs-4" style="cursor: pointer;"></i>
+                        <i class="bi bi-chat fs-4" style="cursor: pointer;" onclick="chatWallModal(); loadChatWall(`<?php echo $email; ?>`);"></i>
                     </div>
                     <i class="bi bi-people fs-4" style="cursor: pointer;" id="sidebar2"></i>
 
@@ -158,9 +158,49 @@
     </div>
     <!--------------------------------------------------------------------->
 
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="inmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 d-block" id="exampleModalLabel1">Chat</h1>
+                    <h1 class="modal-title fs-3 d-none" id="exampleModalLabel2"><i class="bi bi-arrow-left" onclick="backInbox();"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body m-0 p-0">
 
+                    <!-- Wall -->
+                    <div class="col-12 scrollable-content d-block" id="inbox-wall-content" style="height: 60vh;">
+                        <!-- Chat wall will be inserted here -->
+
+                    </div>
+
+                    <!-- Inbox -->
+                    <div class="col-12 t d-none inbox-content" id="inbox-content" style="height: 60vh; overflow-y: scroll;">
+                        <!-- Chat messages will be inserted here -->
+                    </div>
+
+                </div>
+                <div class="modal-footer d-none" id="modal-footer">
+                    <div class="col-12">
+                        <div class="row px-3 py-2">
+                            <div class="col-11">
+                                <input type="text" class="form-control" placeholder="Type here..." id="msg" />
+                            </div>
+                            <div class="col-1 d-flex justify-content-center align-items-center">
+                                <i class="bi bi-send-fill fs-3 text-primary" style="cursor: pointer;" onclick="send_msg(`<?php echo $product_data['user_email']; ?>`)"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
 
     <script src="script.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script>
         $('#sidebar2').click(function() {

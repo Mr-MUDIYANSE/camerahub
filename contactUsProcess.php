@@ -26,8 +26,8 @@ if (isset($_SESSION["u"])) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'kanishkarosairo98@gmail.com';
-            $mail->Password = 'yhby fpyd vvnr yhef';
+            $mail->Username = 'kanishka2001.info@gmail.com';
+            $mail->Password = 'lqeu tmqg kmjr nmwj';
             $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
