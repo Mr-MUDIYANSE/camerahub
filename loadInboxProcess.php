@@ -44,6 +44,7 @@ for ($x = 0; $x < $msg_num; $x++) {
             <div class="media-body">
                 <div class="rec-msg rounded py-2 px-3 mb-2">
                     <p class="mb-0 text-dark"><?php echo $msg_data["content"]; ?></p>
+                    <p class="mb-0 text-dark d-none" id="email"><?php echo $msg_data["from"]; ?></p>
                 </div>
                 <p class="small fw-bold text-black-50 text-end"><?php echo $msg_data["date_time"]; ?></p>
             </div>

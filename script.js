@@ -1167,3 +1167,32 @@ function backInbox() {
     document.getElementById("exampleModalLabel1").className = "d-block";
     document.getElementById("modal-footer").className = "d-none";
 }
+
+function send_msg_inbox() {
+    var remail = document.getElementById("email");
+    var msg = document.getElementById("msg");
+
+    var rec_email = remail.textContent;
+
+    var f = new FormData();
+    f.append("rec_email", rec_email);
+    f.append("msg", msg.value);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+
+            if (t == "success") {
+                document.getElementById("inbox-content").innerHTML = chatInbox(email);
+                document.getElementById("msg").value = "";
+            } else {
+                alert(t);
+            }
+        }
+    };
+
+    r.open("POST", "sendMsgProcess.php", true);
+    r.send(f);
+}

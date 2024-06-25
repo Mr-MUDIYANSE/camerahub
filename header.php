@@ -188,7 +188,7 @@
                                 <input type="text" class="form-control" placeholder="Type here..." id="msg" />
                             </div>
                             <div class="col-1 d-flex justify-content-center align-items-center">
-                                <i class="bi bi-send-fill fs-3 text-primary" style="cursor: pointer;" onclick="send_msg(`<?php echo $product_data['user_email']; ?>`)"></i>
+                                <i class="bi bi-send-fill fs-3 text-primary" style="cursor: pointer;" onclick="send_msg_inbox()"></i>
                             </div>
                         </div>
                     </div>
