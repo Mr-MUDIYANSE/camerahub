@@ -45,8 +45,7 @@
 
                 <?php
 
-                    $product_rs = Database::search("SELECT * FROM `product` WHERE `category_id`='" . $c_data["id"] . "' AND
-                    `status_id`='1'");
+                    $product_rs = Database::search("SELECT * FROM `product` WHERE `category_id`='" . $c_data["id"] . "' AND `status_id`='1'");
                     $product_num = $product_rs->num_rows;
 
                     for ($z = 0; $z < $product_num; $z++) {

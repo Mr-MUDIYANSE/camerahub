@@ -68,7 +68,7 @@ Database::iud("INSERT INTO `product` (`category_id`,`modal_has_brand_id`,`color_
  ('".$category ."','".$modal_has_brand_id."','".$clr."','".$cost."','".$qty."','".$desc."','".$title."','".$status."',
  '".$email."','".$date."','2') ");
 
- echo("Product saved Successfully.");
+ echo("Product saved Successfully");
 
 $product_id = Database::$connection->insert_id;
 

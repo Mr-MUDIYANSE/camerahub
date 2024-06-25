@@ -38,7 +38,7 @@ for ($x = 0; $x < $msg_num; $x++) {
         <!-- new msg -->
         <div class="row py-2 chat-inbox-new" style="border-bottom: 0.5px solid #00000018; cursor: pointer;" onclick="chatInbox(`<?php echo $msg_data['from'] ?>`);">
             <div class="col-3 d-flex justify-content-center">
-                <img src="resources/profile_img/Kanishka_6663edd672bc0.jpeg" alt="" style="height: 50px; width: 50px; border-radius: 25px;">
+                <img src="resources/chat.png" alt="" style="height: 50px; width: 50px; border-radius: 25px;">
             </div>
             <div class="col-6">
                 <div class="row fw-bold">
